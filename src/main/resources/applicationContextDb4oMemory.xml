@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="db4oContainer" class="org.springmodules.db4o.ObjectContainerFactoryBean">
+		<property name="configuration" ref="db4oConfiguration" />
+		<property name="memoryFile">
+			<bean class="com.db4o.ext.MemoryFile" />
+		</property>
+	</bean>
+
+	<bean id="db4oConfiguration" class="org.springmodules.db4o.ConfigurationFactoryBean">
+		<property name="updateDepth" value="2" />
+		<property name="configurationCreationMode" value="NEW" />
+		<property name="lockDatabaseFile" value="false" />
+	</bean>
+
+</beans>

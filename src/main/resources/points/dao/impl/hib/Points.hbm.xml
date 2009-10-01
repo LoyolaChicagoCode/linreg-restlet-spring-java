@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+  <class name="points.dao.impl.hib.HibernatePoint" table="POINTS">
+    <id name="id" column="ID" type="int">
+      <generator class="native"/>
+    </id>
+    <property name="x" column="X" type="double"/>
+    <property name="y" column="Y" type="double"/>
+    <many-to-one name="hibernateColor" column="COLOR" not-null="true"/>
+  </class>
+  
+  <class name="points.dao.impl.hib.HibernateColor" table="COLORS">
+    <id name="rgb" column="RGB" type="int">
+      <generator class="assigned"/>
+    </id>
+  </class>
+  
+</hibernate-mapping>
