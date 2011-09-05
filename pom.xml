@@ -2,7 +2,7 @@
 <project>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>edu.luc.cs.laufer.cs433</groupId>
-	<artifactId>linear-regression-restlet</artifactId>
+	<artifactId>linreg-restlet-spring-java</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<description>CiSE Linear Regression example as RESTful web service
